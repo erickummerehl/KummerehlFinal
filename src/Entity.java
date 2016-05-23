@@ -2,8 +2,8 @@ import processing.core.PApplet;
 
 public abstract class Entity {
 	
-	boolean obstructive;
-	boolean image;
+	private boolean obstructive;
+	private boolean image;
 	
 	public Entity(boolean obstructive, boolean image){
 		this.obstructive = obstructive;
@@ -17,6 +17,10 @@ public abstract class Entity {
 	public void Display(PApplet p, int x, int y){
 		p.rect(x, y, 32, 32);
 		
+	}
+	
+	public boolean isObstructive(){
+		return obstructive;
 	}
 	
 }

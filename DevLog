@@ -1,0 +1,16 @@
+Day 1 5/12/16:
+absent
+
+
+Day 2 5/17/16:
+polished out grid framework
+	green grid
+	click to change tile to grey
+Added Location object
+	used for pathfinding algorithum
+	takes a row and col as input
+Started on pathfinding
+	about halfway done
+	
+
+
