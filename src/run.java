@@ -9,7 +9,7 @@ public class run extends PApplet{
 	
 	
 	public void setup(){
-		size(1280, 720);
+		size(1000, 720);
 		
 		g = new Game(this);
 		
@@ -24,9 +24,11 @@ public class run extends PApplet{
 	}
 	
 	public void mousePressed(){
-		int c = mouseX/32;
-		int r = mouseY/32;
-		g.changeGrid(new Wall(), r, c);
+		int x = mouseX/32;
+		int y = mouseY/32;
+		if(x < 31 && y < 21){
+			g.toggleWall(x, y);
+		}
 	}
 	
 }

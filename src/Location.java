@@ -2,38 +2,38 @@ import java.util.ArrayList;
 
 public class Location {
 
-	private int r;
-	private int c;
+	private int y;
+	private int x;
 	
 	
-	public Location(int r, int c){
-		this.r = r;
-		this.c = c;
+	public Location(int x, int y){
+		this.y = y;
+		this.x = x;
 	}
 	
-	public int getRow(){
-		return r;
+	public int getY(){
+		return y;
 	}
 	
-	public int getCol(){
-		return c;
+	public int getX(){
+		return x;
 	}
 	
 	
-	public ArrayList<Location> getAdjIn(int rMax, int cMax){
+	public ArrayList<Location> getAdjIn(int xMax, int yMax){
 		ArrayList<Location> adj =  new ArrayList<Location>();
 		
-		if (!(c-1 < 0)){
-			adj.add(new Location(r, c-1));
+		if (!(x-1 < 0)){
+			adj.add(new Location(x-1, y));
 		}
-		if (!(r-1 < 0)){
-			adj.add(new Location(r-1, c));
+		if (!(y-1 < 0)){
+			adj.add(new Location(x, y-1));
 		}
-		if (!(c+1 > cMax)){
-			adj.add(new Location(r, c+1));
+		if (!(x+1 > xMax)){
+			adj.add(new Location(x+1, y));
 		}
-		if (!(r+1 > rMax)){
-			adj.add(new Location(r+1, c));
+		if (!(y+1 > yMax)){
+			adj.add(new Location(x, y+1));
 		}
 		
 		return adj;
