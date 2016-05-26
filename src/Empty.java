@@ -1,14 +1,9 @@
 import processing.core.PApplet;
 
 public class Empty extends Entity{
-	
-	
-	
-	
+
 	public Empty(){
 		super(false, false);
-		
-		
 	}
 	
 	
